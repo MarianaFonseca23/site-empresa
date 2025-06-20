@@ -1,0 +1,18 @@
+
+<rss version="2.0">
+
+<channel>
+<title>Notícias recentes</title>
+
+<item>
+<title>Notícia 1</title>
+<link>https://cnnportugal.iol.pt/</link>
+<description>site da cnn de Portugal</description>
+</item>
+<item>
+<title>Notícia 2</title>
+<link>https://g1.globo.com/</link>
+<description>site do g1 GLOBO</description>
+</item>
+</channel>
+</rss>

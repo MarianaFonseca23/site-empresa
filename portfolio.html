@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+    <div class="conteudo">
+
+        <div class="div-central">
+            <h1>Portfólio</h1>
+            <div class="galeria">
+                <img src="imagens/transferir (1).jpeg" onclick="abrirprojeto('projeto1.jpg','Projeto 1','Descrição do projeto 1')" alt="Descrição do projeto 1">
+                <img src="imagens/transferir (2).jpeg" onclick="abrirprojeto('projeto2.jpg','Projeto 2','Descrição do projeto 2')" alt="Descrição do projeto 2">
+                <img src="imagens/transferir.jpeg" onclick="abrirprojeto('projeto3.jpg','Projeto 3','Descrição do projeto 3')" alt="Descrição do projeto 3">  
+            </div>
+        </div>
+     </div>
+
+     <div id="janelaModal" class="modal">
+        <span class="fechar" onclick="fecharModal()">&times;</span>
+        <img id="imagemModal" class="modal-conteudo">
+        <div id="descricaoModal"> </div>
+     </div>
+
+     <script src="galeria.js"></script>
+    
+</body>
+</html>

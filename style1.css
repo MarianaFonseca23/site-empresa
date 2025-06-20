@@ -1,0 +1,226 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+main{
+    margin-top: 20px;
+}
+header{
+    background-color: #333;
+    color: #f4f4f4;
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 10px;
+}
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 1000;
+    border-radius: 10px;
+    padding: 10px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.navbar ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+
+}
+.navbar ul li{
+float: left;
+}
+
+.navbar ul li a{
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    display: block;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover {
+    background-color: #111;
+}
+
+.container{
+    display: flex;
+    padding-top: 50px;
+}
+
+.sidebar{
+    width: 25%;
+    padding: 15px;
+    background-color: #f4f4f4;
+}
+
+.content{
+    width: 75%;
+    padding: 15px;
+}
+#projetos {
+    margin-bottom: 40px;
+}
+
+#projetos h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.galeria {
+    display: flex;
+    column-gap: 15px;
+    width: 100%;
+}
+
+.projeto {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px #333;
+}
+
+.projeto h3 {
+    margin-bottom: 10x;
+}
+
+.projeto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.projeto p {
+    margin-bottom: 10px;
+}
+
+.projeto a {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #333;
+    color: #f4f4f4;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.projeto a:hover {
+    background-color: #ada5a5;
+}
+
+#orcamento h4{
+    
+    margin-top:20px ;
+    font-size: 2rem;
+
+
+}
+
+form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px #333;
+    max-width: 40%;
+    margin: 0 auto;
+}
+
+.form {
+    margin-bottom: 15px;
+}
+
+.form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form input, .form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #333;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    background: #333;
+    color: #f4f4f4;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ada5a5;
+}
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: #f4f4f4;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+#lightbox-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+#lightbox-container img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+#lightbox-caption {
+    color: #f4f4f4;
+    font-size: 1em;
+    text-align: center;
+    padding: 0 10px;
+}
+
+#lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #f4f4f4;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+#contactos h4{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2rem;
+}
+
+#contactForm{
+    margin-top: 10px;
+}
+#map {
+    height: 400px;
+    width: 100%;
+    margin-bottom: 20px;
+}

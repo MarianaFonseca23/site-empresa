@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script  src="script1.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <ul>
+                <li> <a href="projeto.html">Indíce</a></li>
+                <li> <a href="portfolio.html">Portfólio</a></li>
+                <li><a href="orcamento.html">Pedido de Orçamento</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+
+            <div class="sidebar" id="rssFeed">
+                <h3>Últimas Notícias</h3>
+            </div>
+
+
+            <div class="content" id="contentArea">
+
+                <h1>Bem vindo </h1>
+
+                <p>Essa é a página principal com informações destacadas.</p>
+
+            </div>
+        </div>
+
+        <section id="projetos">
+            <h2>Nosso Portfólio</h2>
+            <div class="galeria">
+                <article class="projeto">
+                    <p>Projeto 1</p>
+                    <a href="imagens/transferir (1).jpeg" class="lightbox">
+                        <img src="imagens/transferir (1).jpeg" alt="Descrição do Projeto 1">
+                    </a>
+                    <p>Está é a descrição do nosso primeiro projeto.</p>
+                    <a href="#">Ver projeto</a>
+                </article>
+
+                <article class="projeto">
+                    <p>Projeto 2</p>
+                    <a href="imagens/transferir.jpeg" class="lightbox">
+                        <img src="imagens/transferir.jpeg" alt="Descrição do Projeto 2">
+                    </a>
+                    <p>Está é a descrição do nosso segundo projeto</p>
+                    <a href="#">Ver projeto</a>
+                </article>
+
+                <article class="projeto">
+                    <p>Projeto 3</p>
+                    <a href="imagens/transferir (2).jpeg" class="lightbox">
+                        <img src="imagens/transferir (2).jpeg" alt="Descrição do Projeto 3">
+                    </a>
+                    <p>Está é a descrição do nosso terceiro projeto</p>
+                    <a href="#">Ver projeto</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="orcamento">
+            <form>
+                <h4>Dados:</h4>
+                <div class="form">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required><br><br>
+                </div>
+                <div class="form">
+                    <label for="nome">Apelido:</label>
+                    <input type="text" id="apelido" name="apelido" required><br><br>
+                </div>
+                <div class="form">
+                    <label for="telemovel">Telemóvel:</label>
+                    <input type="tel" id="telemovel" name="telemovel" required><br><br>
+                </div>
+
+                <h2>Pedido de Orçamento:</h2>
+
+                <div class="form-group">
+                <label for="tipoPagina">Tipo de Página Web:</label>
+                <select id="tipoPagina" name="tipoPagina" required>
+                    <option value="500">Página simples - 500€</option>
+                    <option value="1000">Página completa - 1000€</option>
+                    <option value="1500">Página com Ecommerce - 1500€</option>
+                </select><br><br>
+                </div>
+
+                <div class="form-group">
+                <label for="prazoMeses">Prazo em meses:</label>
+                <input type="number" id="prazoMeses" name="prazoMeses" min="1" required>
+                </div>
+
+                <div id="separadores" class="form-group">
+                    <h3>Marque os separadores desejados:</h3>
+                    <label><input type="checkbox" class="separador-checkbox" value="400"> Quem somos</label><br>
+                    <label><input type="checkbox" class="separador-checkbox" value="400"> Galeria de Fotografias</label><br>
+                    <label><input type="checkbox" class="separador-checkbox" value="400"> Gestão interna</label><br>
+                    <label><input type="checkbox" class="separador-checkbox" value="400"> eCommerce</label><br>
+                    <label><input type="checkbox" class="separador-checkbox" value="400"> Onde estamos</label><br>
+                    <label><input type="checkbox" class="separador-checkbox" value="400"> Redes Sociais</label><br>
+                    <label><input type="checkbox" class="separador-checkbox" value="400"> Notícias</label><br><br>
+                </div>
+
+                <div class="form-group">
+                <label>Orçamento Estimado:</label>
+                <span id="orcamentoFinal">0</span>€
+                </div>
+
+            </form>
+        </section>
+
+        <section id="contactos">
+            <form id="contactForm">
+                <h1>Contactos</h1>
+                <div id="map"></div>
+                <p>Endereço do Escritório: MasterD, Rua de Camões 497</p>
+
+                <h2>Deixe seus dados para contato:</h2>
+
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required><br><br>
+
+                <label for="apelido">Apelido:</label>
+                <input type="text" id="apelido" name="apelido" required><br><br>
+
+                <label for="telemovel">Telemóvel:</label>
+                <input type="tel" id="telemovel" name="telemovel" required pattern="[0-9]{9}"><br><br>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="data">Data da Reunião:</label>
+                <input type="date" id="data" name="data" required><br><br>
+
+                <label for="motivo">Motivo da Reunião:</label>
+                <textarea id="motivo" name="motivo" required></textarea><br><br>
+
+                <button type="submit">Enviar</button>
+
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&COPY;@MasterD; 2024 - Todos os direitos reservados</p>
+    </footer>
+
+    <div id="lightbox-container">
+        <span id="lightbox-close">&times;</span>
+        <img src="" alt="" id="lightbox-image">
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</body>
+
+</html>

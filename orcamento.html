@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" src="style1.css">
+</head>
+<body>
+
+    <div id="orcamento">
+        
+        <form id="orcamentoForm">
+            <h2>Dados:</h2>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome"><br><br>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email"><br><br>
+            <label for="telemovel">Telefone:</label>
+            <input type="text" id="telemovel" name="telemovel" value="" required><br><br>
+
+            <h2>Pedido de Orçamento:</h2>
+            <label for="tipoPagina">Tipo de Página Web:</label>
+            <select id="tipoPagina" name="tipoPagina">
+                <option value="500">Página simples - 500€</option>
+                <option value="1000">Página completa - 1000€</option>
+                <option value="1500">Página com Ecommerce - 1500€</option>
+            </select><br><br>
+
+            <label for="prazo">Prazo em meses:</label>
+            <input type="number" id="prazo" name="prazo" value="1">
+
+            <h4>Marque os separadores desejados:</h4>
+            <label><input type="checkbox" class="separador-checkbox" value="400"> Quem somos</label><br>
+            <label><input type="checkbox" class="separador-checkbox" value="400"> Galeria de Fotografias</label><br>
+            <label><input type="checkbox" class="separador-checkbox" value="400"> Gestão interna</label><br>
+            <label><input type="checkbox" class="separador-checkbox" value="400"> eCommerce</label><br>
+            <label><input type="checkbox" class="separador-checkbox" value="400"> Onde estamos</label><br>
+            <label><input type="checkbox" class="separador-checkbox" value="400"> Redes Sociais</label><br>
+            <label><input type="checkbox" class="separador-checkbox" value="400"> Notícias</label>
+            
+            <p>Orçamento estimado: <span id="orcamentoFinal">0€</span></p>
+            <button type="submit">Enviar Pedido</button>
+            
+            
+        </form>
+    </div>
+<script>
+    function calcularOrcamento(){
+        var tipoPagina = parseInt($('#tipoPagina').val());
+        var prazo = parseInt($('#prazo').val());
+        var separadores = $('#separadores').is(':checked') ? 400 : 0;
+
+        var desconto = Math.min(prazo * 0.05,0.2);
+        var total = tipoPagina + separadores;
+        total  -= total * desconto;
+
+        $('#orcamentoFinal').text(total + '€');
+    
+    }
+
+    $('#tipoPagina,#prazo,#separadores').on('change',calcularOrcamento);
+
+    $('#orcamentoForm').on('submit', function(event){
+        event.preventDefault();
+        alert('Orçamento enviado com sucesso');
+    });
+
+    $('.separador-checkbox:checked').each(function () {
+            total += parseFloat($(this).val()); 
+        });
+    </script>
+
+    
+</body>
+</html>
