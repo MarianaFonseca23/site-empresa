@@ -1,4 +1,5 @@
-Site Institucional - Empresa Exemplo
+Site Institucional 
+
 Este é um projeto de site institucional desenvolvido como prática de front-end. O objetivo é apresentar a estrutura de uma página empresarial moderna, responsiva e funcional.
 
 🔧 Tecnologias Utilizadas
